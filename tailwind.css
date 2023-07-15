@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Megrim&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Montserrat';
+}
+
+body {
+  @apply bg-[#efedea] min-h-screen relative;
+}
+
+ul {
+  @apply list-none p-0;
+}
+
+::selection {
+  @apply bg-gray-300;
+}
+
+.inputField {
+  @apply bg-transparent
+          border border-gray-400
+          px-3
+          py-2
+          outline-none
+          w-full
+          mt-4
+          focus:border-gray-600
+          transition
+          appearance-none
+          placeholder-transparent;
+}
+
+.labelInput {
+  @apply bg-primary
+          px-1
+          font-normal
+          text-gray-600
+          absolute
+          top-[0.3rem]
+          text-sm
+          left-[0.8rem]
+          peer-placeholder-shown:top-[1.49rem]
+          peer-placeholder-shown:text-base
+          peer-placeholder-shown:text-gray-400
+          peer-focus:top-[0.3rem] peer-focus:text-sm peer-focus:text-gray-600
+          transition-all
+          pointer-events-none
+          select-none;
+}
+
+.btn {
+  @apply px-6
+          py-2
+          font-semibold
+          mt-2
+          inline-block
+          border border-solid border-black
+          my-2
+          transition
+          shadow-black
+          hover:shadow-gray
+          text-sm
+          z-[2]
+          relative
+          select-none
+          bg-[#ddd];
+}
+
+.btnDark {
+  @apply bg-black/90
+  !font-medium
+        text-white
+        transition
+        shadow-gray;
+}
+
+.isReady {
+  @apply !shadow-none relative translate-x-[5px] translate-y-[5px];
+}
